@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dsmenkj0uk4yu"
+path="res://.godot/imported/door-rotate.obj-d13eec931a16aa0c023156692d5f6a4e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/door-rotate.obj-d13eec931a16aa0c023156692d5f6a4e.mesh"]
+
+source_file="res://Assets/kenney_prototype-kit/Models/OBJ format/door-rotate.obj"
+dest_files=["res://.godot/imported/door-rotate.obj-d13eec931a16aa0c023156692d5f6a4e.mesh", "res://.godot/imported/door-rotate.obj-d13eec931a16aa0c023156692d5f6a4e.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
