@@ -10,7 +10,8 @@ const GRAVITY = 20.0  # Valor por defecto es ~9.8, aumentamos para mayor velocid
 # Referencia al AnimationTree
 @onready var anim_tree = $AnimationTree
 @onready var anim_state = anim_tree.get("parameters/playback")
-
+var is_climbing: bool = false
+var climb_direction: Vector3 = Vector3.ZERO
 # Variables para control de animaciones
 var was_in_air = false
 
@@ -19,7 +20,15 @@ func _ready():
 	anim_tree.active = true
 
 func _physics_process(delta: float) -> void:
-	# Aplicar gravedad personalizada
+	if is_climbing:
+		# Mover al jugador hacia arriba mientras escala
+		velocity = climb_direction * 2.0  # velocidad de subida
+		move_and_slide()
+	else:
+		move_player(delta)
+
+	
+func move_player(delta: float):
 	if not is_on_floor():
 		velocity.y -= GRAVITY * delta
 		was_in_air = true

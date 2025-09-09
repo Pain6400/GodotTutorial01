@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://bnudvetqkpuj5"]
+[gd_scene load_steps=8 format=4 uid="uid://bnudvetqkpuj5"]
 
 [ext_resource type="Texture2D" uid="uid://yarcdfnbs3ss" path="res://Assets/kenney_platformer-kit/Models/GLB format/Textures/colormap.png" id="1_2peo8"]
 [ext_resource type="Script" uid="uid://cil8gkgb74yd7" path="res://Scripts/Objects/ladder_long.gd" id="1_f818u"]
@@ -42,22 +42,37 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_56iea")
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_f818u"]
-height = 0.673828
+height = 0.337402
 radius = 0.259766
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_f818u"]
+radius = 0.233719
+height = 1.95256
 
 [node name="ladder_long" type="Node3D"]
 script = ExtResource("1_f818u")
 
 [node name="ladder" type="Node3D" parent="."]
+transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 0, 0, 0)
 
 [node name="ladder-long" type="MeshInstance3D" parent="ladder"]
 mesh = SubResource("ArrayMesh_ig2kv")
 skeleton = NodePath("")
 
-[node name="Area3D" type="Area3D" parent="ladder"]
+[node name="Tunel" type="Area3D" parent="ladder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.430362, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ladder/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.572978, 0)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ladder/Tunel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.404765, 0)
 shape = SubResource("CylinderShape3D_f818u")
 
-[connection signal="body_entered" from="ladder/Area3D" to="." method="_on_area_3d_body_entered"]
+[node name="Climb" type="Area3D" parent="ladder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.626931, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ladder/Climb"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.268568, 0)
+shape = SubResource("CapsuleShape3D_f818u")
+
+[connection signal="body_entered" from="ladder/Tunel" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="ladder/Climb" to="." method="_on_climb_body_entered"]
+[connection signal="body_exited" from="ladder/Climb" to="." method="_on_climb_body_exited"]
