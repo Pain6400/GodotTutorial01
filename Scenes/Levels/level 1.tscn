@@ -1,0 +1,1034 @@
+[gd_scene load_steps=8 format=3 uid="uid://cc2twdlataa3b"]
+
+[ext_resource type="PackedScene" uid="uid://bi213lsnuyh5f" path="res://Players/player_1.tscn" id="1_w1g1m"]
+[ext_resource type="PackedScene" uid="uid://dehimhulnlk6p" path="res://Scenes/Levels/Tiles/Tiles.tscn" id="2_qrghq"]
+[ext_resource type="PackedScene" uid="uid://i5sourwuryr" path="res://Scenes/Objects/lever.tscn" id="3_nsgnr"]
+[ext_resource type="PackedScene" uid="uid://b5307ood0rtml" path="res://Scenes/Objects/Exploding Create.tscn" id="4_1lhxr"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fy1lx"]
+
+[sub_resource type="Sky" id="Sky_vehsj"]
+sky_material = SubResource("ProceduralSkyMaterial_fy1lx")
+
+[sub_resource type="Environment" id="Environment_0rh6h"]
+background_mode = 2
+sky = SubResource("Sky_vehsj")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.24801, 14.0359)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_0rh6h")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.80694, 0.590634, 0, -0.590634, 0.80694, 0, 6.93356, 6.42351)
+
+[node name="Player 1" parent="." instance=ExtResource("1_w1g1m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Level Layout" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.261832)
+
+[node name="Cube1" parent="Level Layout" instance=ExtResource("2_qrghq")]
+
+[node name="Cube3" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+
+[node name="Cube2" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="Cube4" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+
+[node name="Cube5" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)
+
+[node name="Cube6" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+
+[node name="Cube7" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube8" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1)
+
+[node name="Cube9" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -1)
+
+[node name="Cube10" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+
+[node name="Cube11" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 1)
+
+[node name="Cube12" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -1)
+
+[node name="Cube13" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="Cube14" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 1)
+
+[node name="Cube15" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -1)
+
+[node name="Cube16" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
+
+[node name="Cube17" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 1)
+
+[node name="Cube18" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -1)
+
+[node name="Cube19" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="Cube20" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 1)
+
+[node name="Cube21" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -1)
+
+[node name="Cube22" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+
+[node name="Cube23" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 1)
+
+[node name="Cube24" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -1)
+
+[node name="Cube25" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="Cube26" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 1)
+
+[node name="Cube27" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -1)
+
+[node name="Cube28" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="Cube29" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 1)
+
+[node name="Cube30" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -1)
+
+[node name="Cube31" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube32" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
+
+[node name="Cube33" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -1)
+
+[node name="Cube34" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Cube35" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+
+[node name="Cube36" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+
+[node name="Cube37" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0)
+
+[node name="Cube38" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 1)
+
+[node name="Cube39" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -1)
+
+[node name="Cube40" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 0)
+
+[node name="Cube41" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 1)
+
+[node name="Cube42" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -1)
+
+[node name="Cube43" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
+
+[node name="Cube44" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 1)
+
+[node name="Cube45" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -1)
+
+[node name="Cube46" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 0)
+
+[node name="Cube47" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 1)
+
+[node name="Cube48" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -1)
+
+[node name="Cube49" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
+
+[node name="Cube50" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 1)
+
+[node name="Cube51" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -1)
+
+[node name="Cube52" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
+
+[node name="Cube53" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 1)
+
+[node name="Cube54" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -1)
+
+[node name="Cube55" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+
+[node name="Cube56" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 1)
+
+[node name="Cube57" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -1)
+
+[node name="Cube58" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 0)
+
+[node name="Cube59" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 1)
+
+[node name="Cube60" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -1)
+
+[node name="Cube61" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
+
+[node name="Cube62" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 1)
+
+[node name="Cube63" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -1)
+
+[node name="Cube64" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 0)
+
+[node name="Cube65" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 1)
+
+[node name="Cube66" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -1)
+
+[node name="Cube67" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
+
+[node name="Cube68" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 1)
+
+[node name="Cube69" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -1)
+
+[node name="Cube70" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 0)
+
+[node name="Cube71" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 1)
+
+[node name="Cube72" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, -1)
+
+[node name="Cube73" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 0)
+
+[node name="Cube74" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 1)
+
+[node name="Cube75" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -1)
+
+[node name="Cube76" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, 0)
+
+[node name="Cube77" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, 1)
+
+[node name="Cube78" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, -1)
+
+[node name="Cube183" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.025, 13.5372, 0)
+
+[node name="Cube184" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.025, 13.5372, 1)
+
+[node name="Cube185" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.025, 13.5372, -1)
+
+[node name="Cube186" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.025, 13.5372, 0)
+
+[node name="Cube187" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.025, 13.5372, 1)
+
+[node name="Cube188" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.025, 13.5372, -1)
+
+[node name="Cube189" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.025, 13.5372, 0)
+
+[node name="Cube190" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.025, 13.5372, 1)
+
+[node name="Cube191" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.025, 13.5372, -1)
+
+[node name="Cube192" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.025, 13.5372, 0)
+
+[node name="Cube193" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.025, 13.5372, 1)
+
+[node name="Cube194" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.025, 13.5372, -1)
+
+[node name="Cube79" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 0)
+
+[node name="Cube80" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 1)
+
+[node name="Cube195" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.025, 13.5372, 0)
+
+[node name="Cube196" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.025, 13.5372, 1)
+
+[node name="Cube197" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.025, 13.5372, -1)
+
+[node name="Cube198" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.025, 13.5372, 0)
+
+[node name="Cube199" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.025, 13.5372, 1)
+
+[node name="Cube200" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.025, 13.5372, -1)
+
+[node name="Cube201" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.025, 13.5372, 0)
+
+[node name="Cube202" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.025, 13.5372, 1)
+
+[node name="Cube203" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.025, 13.5372, -1)
+
+[node name="Cube204" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.025, 13.5372, 0)
+
+[node name="Cube205" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.025, 13.5372, 1)
+
+[node name="Cube206" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.025, 13.5372, -1)
+
+[node name="Cube182" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
+
+[node name="Cube207" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 1)
+
+[node name="Cube208" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.02501, 13.5372, 0)
+
+[node name="Cube209" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.02501, 13.5372, 1)
+
+[node name="Cube210" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.02501, 13.5372, -1)
+
+[node name="Cube211" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.02501, 13.5372, 0)
+
+[node name="Cube212" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.02501, 13.5372, 1)
+
+[node name="Cube213" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.02501, 13.5372, -1)
+
+[node name="Cube214" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.02501, 13.5372, 0)
+
+[node name="Cube215" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.02501, 13.5372, 1)
+
+[node name="Cube216" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.02501, 13.5372, -1)
+
+[node name="Cube217" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.02501, 13.5372, 0)
+
+[node name="Cube218" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.02501, 13.5372, 1)
+
+[node name="Cube219" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.02501, 13.5372, -1)
+
+[node name="Cube220" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+
+[node name="Cube221" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 1)
+
+[node name="Cube222" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.02501, 13.5372, 0)
+
+[node name="Cube223" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.02501, 13.5372, 1)
+
+[node name="Cube224" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.02501, 13.5372, -1)
+
+[node name="Cube225" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.02501, 13.5372, 0)
+
+[node name="Cube226" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.02501, 13.5372, 1)
+
+[node name="Cube227" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.02501, 13.5372, -1)
+
+[node name="Cube228" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.02501, 13.5372, 0)
+
+[node name="Cube229" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.02501, 13.5372, 1)
+
+[node name="Cube230" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.02501, 13.5372, -1)
+
+[node name="Cube231" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.02501, 13.5372, 0)
+
+[node name="Cube232" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.02501, 13.5372, 1)
+
+[node name="Cube233" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.02501, 13.5372, -1)
+
+[node name="Cube234" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Cube235" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1)
+
+[node name="Cube236" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.97499, 13.5372, 0)
+
+[node name="Cube237" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.97499, 13.5372, 1)
+
+[node name="Cube238" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.97499, 13.5372, -1)
+
+[node name="Cube239" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.974988, 13.5372, 0)
+
+[node name="Cube240" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.974988, 13.5372, 1)
+
+[node name="Cube241" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.974988, 13.5372, -1)
+
+[node name="Cube242" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.025013, 13.5372, 0)
+
+[node name="Cube243" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.025013, 13.5372, 1)
+
+[node name="Cube244" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.025013, 13.5372, -1)
+
+[node name="Cube245" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02501, 13.5372, 0)
+
+[node name="Cube246" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02501, 13.5372, 1)
+
+[node name="Cube247" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02501, 13.5372, -1)
+
+[node name="Cube248" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Cube249" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
+
+[node name="Cube250" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.97499, 13.5372, 0)
+
+[node name="Cube251" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.97499, 13.5372, 1)
+
+[node name="Cube252" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.97499, 13.5372, -1)
+
+[node name="Cube253" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.97499, 13.5372, 0)
+
+[node name="Cube254" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.97499, 13.5372, 1)
+
+[node name="Cube255" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.97499, 13.5372, -1)
+
+[node name="Cube256" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.97499, 13.5372, 0)
+
+[node name="Cube257" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.97499, 13.5372, 1)
+
+[node name="Cube258" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.97499, 13.5372, -1)
+
+[node name="Cube259" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.97499, 13.5372, 0)
+
+[node name="Cube260" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.97499, 13.5372, 1)
+
+[node name="Cube261" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.97499, 13.5372, -1)
+
+[node name="Cube262" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="Cube263" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 1)
+
+[node name="Cube264" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.97499, 13.5372, 0)
+
+[node name="Cube265" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.97499, 13.5372, 1)
+
+[node name="Cube266" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.97499, 13.5372, -1)
+
+[node name="Cube267" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.97499, 13.5372, 0)
+
+[node name="Cube268" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.97499, 13.5372, 1)
+
+[node name="Cube269" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.97499, 13.5372, -1)
+
+[node name="Cube270" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.97499, 13.5372, 0)
+
+[node name="Cube271" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.97499, 13.5372, 1)
+
+[node name="Cube272" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.97499, 13.5372, -1)
+
+[node name="Cube273" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.97499, 13.5372, 0)
+
+[node name="Cube274" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.97499, 13.5372, 1)
+
+[node name="Cube275" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.97499, 13.5372, -1)
+
+[node name="Cube276" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
+
+[node name="Cube277" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 1)
+
+[node name="Cube278" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.975, 13.5372, 0)
+
+[node name="Cube279" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.975, 13.5372, 1)
+
+[node name="Cube280" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.975, 13.5372, -1)
+
+[node name="Cube281" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.975, 13.5372, 0)
+
+[node name="Cube282" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.975, 13.5372, 1)
+
+[node name="Cube283" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.975, 13.5372, -1)
+
+[node name="Cube284" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.975, 13.5372, 0)
+
+[node name="Cube285" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.975, 13.5372, 1)
+
+[node name="Cube286" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.975, 13.5372, -1)
+
+[node name="Cube287" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.975, 13.5372, 0)
+
+[node name="Cube288" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.975, 13.5372, 1)
+
+[node name="Cube289" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.975, 13.5372, -1)
+
+[node name="Cube290" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 0)
+
+[node name="Cube291" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 1)
+
+[node name="Cube295" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.975, 13.5372, 0)
+
+[node name="Cube296" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.975, 13.5372, 1)
+
+[node name="Cube297" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.975, 13.5372, -1)
+
+[node name="Cube298" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.975, 13.5372, 0)
+
+[node name="Cube299" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.975, 13.5372, 1)
+
+[node name="Cube300" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.975, 13.5372, -1)
+
+[node name="Cube301" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.975, 13.5372, 0)
+
+[node name="Cube302" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.975, 13.5372, 1)
+
+[node name="Cube303" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.975, 13.5372, -1)
+
+[node name="Cube81" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, -1)
+
+[node name="Cube82" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 0)
+
+[node name="Cube83" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 1)
+
+[node name="Cube84" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -0.98346)
+
+[node name="Cube85" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.9467, 0.0532732, 0.0165396)
+
+[node name="Cube86" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 1.01654)
+
+[node name="Cube87" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, -1)
+
+[node name="Cube89" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 0.999668, 0.0257582, 0, -0.0257582, 0.999668, -17, 0, 1)
+
+[node name="Cube98" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, 0)
+
+[node name="Cube90" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, -1)
+
+[node name="Cube104" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 0.999668, 0.0257582, 0, -0.0257582, 0.999668, -17, 1, 1)
+
+[node name="Cube105" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 1, 0)
+
+[node name="Cube106" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 1, -1)
+
+[node name="Cube107" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 0.999668, 0.0257582, 0, -0.0257582, 0.999668, -17, 2, 1)
+
+[node name="Cube108" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 2, 0)
+
+[node name="Cube109" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 2, -1)
+
+[node name="Cube110" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 0.999668, 0.0257582, 0, -0.0257582, 0.999668, -17, 3, 1)
+
+[node name="Cube111" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 3, 0)
+
+[node name="Cube112" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 3, -1)
+
+[node name="Cube113" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 0.999668, 0.0257582, 0, -0.0257582, 0.999668, -17, 4, 1)
+
+[node name="Cube114" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 4, 0)
+
+[node name="Cube115" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 4, -1)
+
+[node name="Cube116" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 0.999668, 0.0257582, 0, -0.0257582, 0.999668, -17, 5, 1)
+
+[node name="Cube117" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 5, 0)
+
+[node name="Cube118" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 5, -1)
+
+[node name="Cube119" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 0.999668, 0.0257582, 0, -0.0257582, 0.999668, -17, 6, 1)
+
+[node name="Cube120" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 6, 0)
+
+[node name="Cube121" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 6, -1)
+
+[node name="Cube122" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 0.999668, 0.0257582, 0, -0.0257582, 0.999668, -17, 7, 1)
+
+[node name="Cube123" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 7, 0)
+
+[node name="Cube124" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 7, -1)
+
+[node name="Cube125" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 0.999668, 0.0257582, 0, -0.0257582, 0.999668, -17, 8, 1)
+
+[node name="Cube126" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 8, 0)
+
+[node name="Cube127" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 8, -1)
+
+[node name="Cube128" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 0.999668, 0.0257582, 0, -0.0257582, 0.999668, -17, 9, 1)
+
+[node name="Cube129" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 9, 0)
+
+[node name="Cube130" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 9, -1)
+
+[node name="Cube131" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 0.999668, 0.0257582, 0, -0.0257582, 0.999668, -17, 10, 1)
+
+[node name="Cube132" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 10, 0)
+
+[node name="Cube133" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 10, -1)
+
+[node name="Cube134" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 0.999668, 0.0257582, 0, -0.0257582, 0.999668, -17, 11, 1)
+
+[node name="Cube135" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 11, 0)
+
+[node name="Cube136" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 11, -1)
+
+[node name="Cube137" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 0.999668, 0.0257582, 0, -0.0257582, 0.999668, -17, 12, 1)
+
+[node name="Cube138" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 12, 0)
+
+[node name="Cube139" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 12, -1)
+
+[node name="Cube140" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 0.999668, 0.0257582, 0, -0.0257582, 0.999668, -17, 13, 1)
+
+[node name="Cube141" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 13, 0)
+
+[node name="Cube142" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 13, -1)
+
+[node name="Cube88" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 1)
+
+[node name="Cube91" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -1)
+
+[node name="Cube97" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 0)
+
+[node name="Cube92" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 0)
+
+[node name="Cube93" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 1)
+
+[node name="Cube94" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -1)
+
+[node name="Cube292" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9688, 1, 1)
+
+[node name="Cube293" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9688, 1, -1)
+
+[node name="Cube294" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9688, 1, 0)
+
+[node name="Cube304" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.9688, 1, 0)
+
+[node name="Cube305" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.9688, 1, 1)
+
+[node name="Cube306" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.9688, 1, -1)
+
+[node name="Cube337" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9688, 1, 1)
+
+[node name="Cube338" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9688, 1, -1)
+
+[node name="Cube339" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9688, 1, 0)
+
+[node name="Cube340" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9688, 1, 0)
+
+[node name="Cube341" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9688, 1, 1)
+
+[node name="Cube367" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9688, 1.02534, 1)
+
+[node name="Cube368" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9688, 1.02534, -1)
+
+[node name="Cube369" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9688, 1.02534, 0)
+
+[node name="Cube370" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9688, 1.02534, 0)
+
+[node name="Cube371" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9688, 1.02534, 1)
+
+[node name="Cube372" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9688, 1.02534, -1)
+
+[node name="Cube385" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.96883, 0.980176, 1)
+
+[node name="Cube386" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.96883, 0.980176, -1)
+
+[node name="Cube387" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.96883, 0.980176, 0)
+
+[node name="Cube388" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.96883, 0.980176, 0)
+
+[node name="Cube389" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.96883, 0.980176, 1)
+
+[node name="Cube390" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.96883, 0.980176, -1)
+
+[node name="Cube397" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.09323, 1.07021, 1)
+
+[node name="Cube398" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.09323, 1.07021, -1)
+
+[node name="Cube399" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.09323, 1.07021, 0)
+
+[node name="Cube400" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.09323, 1.07021, 0)
+
+[node name="Cube401" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.09323, 1.07021, 1)
+
+[node name="Cube402" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.09323, 1.07021, -1)
+
+[node name="Cube95" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 1)
+
+[node name="Cube88" parent="Level Layout/Cube95" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="Cube96" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -1)
+
+[node name="Cube99" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, 0)
+
+[node name="Cube100" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, 1)
+
+[node name="Cube101" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -1)
+
+[node name="Cube102" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 1)
+
+[node name="Cube88" parent="Level Layout/Cube102" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="Cube103" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -1)
+
+[node name="Cube143" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 0.999668, 0.0257582, 0, -0.0257582, 0.999668, 16.9778, 1, 1)
+
+[node name="Cube144" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9778, 1, 0)
+
+[node name="Cube145" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9778, 1, -1)
+
+[node name="Cube146" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 0.999668, 0.0257582, 0, -0.0257582, 0.999668, 16.9778, 2, 1)
+
+[node name="Cube147" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9778, 2, 0)
+
+[node name="Cube148" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9778, 2, -1)
+
+[node name="Cube149" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 0.999668, 0.0257582, 0, -0.0257582, 0.999668, 16.9778, 3, 1)
+
+[node name="Cube150" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9778, 3, 0)
+
+[node name="Cube151" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9778, 3, -1)
+
+[node name="Cube152" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 0.999668, 0.0257582, 0, -0.0257582, 0.999668, 16.9778, 4, 1)
+
+[node name="Cube153" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9778, 4, 0)
+
+[node name="Cube154" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9778, 4, -1)
+
+[node name="Cube155" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 0.999668, 0.0257582, 0, -0.0257582, 0.999668, 16.9778, 5, 1)
+
+[node name="Cube156" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9778, 5, 0)
+
+[node name="Cube157" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9778, 5, -1)
+
+[node name="Cube158" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 0.999668, 0.0257582, 0, -0.0257582, 0.999668, 16.9778, 6, 1)
+
+[node name="Cube159" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9778, 6, 0)
+
+[node name="Cube160" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9778, 6, -1)
+
+[node name="Cube161" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 0.999668, 0.0257582, 0, -0.0257582, 0.999668, 16.9778, 7, 1)
+
+[node name="Cube162" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9778, 7, 0)
+
+[node name="Cube163" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9778, 7, -1)
+
+[node name="Cube164" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 0.999668, 0.0257582, 0, -0.0257582, 0.999668, 16.9778, 8, 1)
+
+[node name="Cube165" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9778, 8, 0)
+
+[node name="Cube166" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9778, 8, -1)
+
+[node name="Cube167" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 0.999668, 0.0257582, 0, -0.0257582, 0.999668, 16.9778, 9, 1)
+
+[node name="Cube168" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9778, 9, 0)
+
+[node name="Cube169" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9778, 9, -1)
+
+[node name="Cube170" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 0.999668, 0.0257582, 0, -0.0257582, 0.999668, 16.9778, 10, 1)
+
+[node name="Cube171" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9778, 10, 0)
+
+[node name="Cube172" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9778, 10, -1)
+
+[node name="Cube173" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 0.999668, 0.0257582, 0, -0.0257582, 0.999668, 16.9778, 11, 1)
+
+[node name="Cube174" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9778, 11, 0)
+
+[node name="Cube175" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9778, 11, -1)
+
+[node name="Cube176" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 0.999668, 0.0257582, 0, -0.0257582, 0.999668, 16.9778, 12, 1)
+
+[node name="Cube177" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9778, 12, 0)
+
+[node name="Cube178" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9778, 12, -1)
+
+[node name="Cube179" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 0.999668, 0.0257582, 0, -0.0257582, 0.999668, 16.9778, 13, 1)
+
+[node name="Cube180" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9778, 13, 0)
+
+[node name="Cube181" parent="Level Layout" instance=ExtResource("2_qrghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9778, 13, -1)
+
+[node name="Objects" type="Node3D" parent="."]
+
+[node name="lever" parent="Objects" instance=ExtResource("3_nsgnr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.8434, 2.01562, 0)
+
+[node name="Exploding Create" parent="Objects" groups=["Exploding Cube"] instance=ExtResource("4_1lhxr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.591, 1, 0.0387661)
+
+[connection signal="lever_toggled" from="Objects/lever" to="Objects/Exploding Create" method="_on_lever_lever_toggled"]

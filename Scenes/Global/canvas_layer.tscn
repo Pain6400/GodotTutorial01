@@ -1,0 +1,69 @@
+[gd_scene load_steps=6 format=3 uid="uid://rkbnx0huynrj"]
+
+[ext_resource type="Script" uid="uid://b7y8lfdups387" path="res://Scripts/Global/canvas_layer.gd" id="1_sc7km"]
+
+[sub_resource type="Animation" id="Animation_crm1o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 648)]
+}
+
+[sub_resource type="Animation" id="Animation_sc7km"]
+resource_name = "Trans_In"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 648), Vector2(1152, 648)]
+}
+
+[sub_resource type="Animation" id="Animation_o4ald"]
+resource_name = "Trans_Out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333334, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1152, 648), Vector2(0, 648)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_khs45"]
+_data = {
+&"RESET": SubResource("Animation_crm1o"),
+&"Trans_In": SubResource("Animation_sc7km"),
+&"Trans_Out": SubResource("Animation_o4ald")
+}
+
+[node name="CanvasLayer" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_sc7km")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="Anim" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_khs45")
+}
+autoplay = "RESET"

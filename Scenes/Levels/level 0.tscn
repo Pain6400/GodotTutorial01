@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://ymm2jnu753yg"]
+[gd_scene load_steps=9 format=3 uid="uid://ymm2jnu753yg"]
 
 [ext_resource type="PackedScene" uid="uid://bi213lsnuyh5f" path="res://Players/player_1.tscn" id="1_fy1lx"]
 [ext_resource type="PackedScene" uid="uid://dehimhulnlk6p" path="res://Scenes/Levels/Tiles/Tiles.tscn" id="2_vehsj"]
 [ext_resource type="PackedScene" uid="uid://i5sourwuryr" path="res://Scenes/Objects/lever.tscn" id="3_0rh6h"]
+[ext_resource type="PackedScene" uid="uid://bnudvetqkpuj5" path="res://Scenes/Objects/ladder_long.tscn" id="3_vh2lw"]
 [ext_resource type="PackedScene" uid="uid://b5307ood0rtml" path="res://Scenes/Objects/Exploding Create.tscn" id="4_2eqyl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fy1lx"]
@@ -1216,6 +1217,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9778, 13, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9778, 13, -1)
 
 [node name="Objects" type="Node3D" parent="."]
+
+[node name="ladder_long" parent="Objects" instance=ExtResource("3_vh2lw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.0165, 6.16008, 0)
 
 [node name="lever" parent="Objects" instance=ExtResource("3_0rh6h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.16695, 0.999124, 0)
