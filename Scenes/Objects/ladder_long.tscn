@@ -42,12 +42,12 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_56iea")
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_f818u"]
-height = 0.337402
+height = 0.0894774
 radius = 0.259766
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_f818u"]
-radius = 0.233719
-height = 1.95256
+radius = 0.261083
+height = 2.06345
 
 [node name="ladder_long" type="Node3D"]
 script = ExtResource("1_f818u")
@@ -60,17 +60,17 @@ mesh = SubResource("ArrayMesh_ig2kv")
 skeleton = NodePath("")
 
 [node name="Tunel" type="Area3D" parent="ladder"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.430362, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.10634, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ladder/Tunel"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.404765, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.100871, 0)
 shape = SubResource("CylinderShape3D_f818u")
 
 [node name="Climb" type="Area3D" parent="ladder"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.626931, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ladder/Climb"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.268568, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.312088, 0)
 shape = SubResource("CapsuleShape3D_f818u")
 
 [connection signal="body_entered" from="ladder/Tunel" to="." method="_on_area_3d_body_entered"]

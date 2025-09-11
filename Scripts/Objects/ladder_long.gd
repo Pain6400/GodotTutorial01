@@ -1,6 +1,8 @@
 extends Node3D
 
+@onready var climb_area: Area3D = $ladder/Climb
 
+		
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.is_in_group("players"):
 		var enemigos_restantes = get_tree().get_nodes_in_group("Exploding Cube").size()
@@ -12,8 +14,14 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 
 
 func _on_climb_body_entered(body: Node3D) -> void:
-	pass
+	if body.is_in_group("players"):
+		# Notificar al jugador que está en una escalera
+		if body.has_method("set_ladder"):
+			body.set_ladder(self)
 
 
 func _on_climb_body_exited(body: Node3D) -> void:
-	pass
+	if body.is_in_group("players"):
+		# Notificar al jugador que salió de la escalera
+		if body.has_method("set_ladder"):
+			body.set_ladder(null)
